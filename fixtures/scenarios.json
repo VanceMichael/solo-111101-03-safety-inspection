@@ -1,0 +1,98 @@
+[
+  {
+    "name": "open",
+    "run_id": "run-open",
+    "sources": [
+      "/inspection"
+    ],
+    "options": {
+      "fetch_attachments": true
+    },
+    "expected": {
+      "issues": [
+        {
+          "project": "P1",
+          "issue": "H1",
+          "state": "stop"
+        },
+        {
+          "project": "P2",
+          "issue": "H1",
+          "state": "open"
+        }
+      ]
+    }
+  },
+  {
+    "name": "review",
+    "run_id": "run-review",
+    "sources": [
+      "/inspection",
+      "/review"
+    ],
+    "options": {
+      "fetch_attachments": true
+    },
+    "expected": {
+      "issues": [
+        {
+          "project": "P1",
+          "issue": "H1",
+          "state": "closed"
+        }
+      ]
+    }
+  },
+  {
+    "name": "missing_evidence",
+    "run_id": "run-missing_evidence",
+    "sources": [
+      "/inspection",
+      "/review"
+    ],
+    "options": {
+      "fetch_attachments": false
+    },
+    "expected": {
+      "issues": [
+        {
+          "project": "P1",
+          "issue": "H1",
+          "state": "stop"
+        }
+      ],
+      "pending": [
+        {
+          "reason": "missing_attachment"
+        }
+      ]
+    }
+  },
+  {
+    "name": "withdrawal",
+    "run_id": "run-withdrawal",
+    "sources": [
+      "/review",
+      "/inspection",
+      "/withdraw"
+    ],
+    "options": {
+      "fetch_attachments": true
+    },
+    "expected": {
+      "issues": [
+        {
+          "project": "P1",
+          "issue": "H1",
+          "state": "stop"
+        }
+      ],
+      "history": [
+        {
+          "kind": "withdraw",
+          "target_revision": 2
+        }
+      ]
+    }
+  }
+]

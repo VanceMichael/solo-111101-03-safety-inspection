@@ -1,0 +1,35 @@
+{
+  "/inspection": [
+    {
+      "status": 200,
+      "file": "inspection.xml",
+      "headers": {
+        "ETag": "v1"
+      }
+    }
+  ],
+  "/review": [
+    {
+      "status": 200,
+      "file": "review.xml"
+    }
+  ],
+  "/withdraw": [
+    {
+      "status": 200,
+      "file": "withdraw.xml"
+    }
+  ],
+  "/attachment/photo-a.txt": [
+    {
+      "status": 200,
+      "file": "photo-a.txt"
+    }
+  ],
+  "/attachment/review-a.txt": [
+    {
+      "status": 200,
+      "file": "review-a.txt"
+    }
+  ]
+}

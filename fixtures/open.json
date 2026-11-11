@@ -1,0 +1,12 @@
+{
+  "name": "open",
+  "run_id": "run-open",
+  "sources": [
+    "/inspection"
+  ],
+  "options": {
+    "fetch_attachments": true
+  },
+  "fixture_root": "fixtures",
+  "portal_database": "portal.sqlite3"
+}

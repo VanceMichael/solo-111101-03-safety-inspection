@@ -1,0 +1,13 @@
+{
+  "name": "missing_evidence",
+  "run_id": "run-missing_evidence",
+  "sources": [
+    "/inspection",
+    "/review"
+  ],
+  "options": {
+    "fetch_attachments": false
+  },
+  "fixture_root": "fixtures",
+  "portal_database": "portal.sqlite3"
+}

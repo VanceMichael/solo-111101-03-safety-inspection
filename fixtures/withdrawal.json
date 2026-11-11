@@ -1,0 +1,14 @@
+{
+  "name": "withdrawal",
+  "run_id": "run-withdrawal",
+  "sources": [
+    "/review",
+    "/inspection",
+    "/withdraw"
+  ],
+  "options": {
+    "fetch_attachments": true
+  },
+  "fixture_root": "fixtures",
+  "portal_database": "portal.sqlite3"
+}

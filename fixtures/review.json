@@ -1,0 +1,13 @@
+{
+  "name": "review",
+  "run_id": "run-review",
+  "sources": [
+    "/inspection",
+    "/review"
+  ],
+  "options": {
+    "fetch_attachments": true
+  },
+  "fixture_root": "fixtures",
+  "portal_database": "portal.sqlite3"
+}
